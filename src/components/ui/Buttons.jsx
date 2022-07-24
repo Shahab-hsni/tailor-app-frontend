@@ -41,12 +41,48 @@ const Btn = styled.a`
   }
 `;
 
+const SimpleBtn = styled.button`
+  display: inline-flex;
+  border-radius: 4px;
+  color: ${(props) => props.theme.color};
+  background: ${(props) => props.theme.bgColor};
+  border: 1px solid ${(props) => props.theme.borderColor};
+  cursor: pointer;
+  padding: 8px 36px;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 24px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    filter: brightness(90%);
+  }
+
+  @media only screen and (min-width: 1200px) {
+    font-size: 16px;
+    padding: 10px 48px;
+    font-weight: 500;
+  }
+`;
+
 //PrimaryButton
-const PrimaryButton = ({ children, href, width = "100%", height = "100%" }) => {
+const PrimaryButton = ({ children, type, href = null, handleOnClick = null, width = "100%", height = "100%" }) => {
   return (
-    <Btn width={width} height={height} theme={primaryTheme} href={href}>
-      {children}
-    </Btn>
+    <>
+      {type === 'Link' && (
+        <Btn width={width} height={height} theme={primaryTheme} href={href}>
+          {children}
+        </Btn>
+      )}
+      {type === 'Button' && (
+        <SimpleBtn width={width} height={height} theme={primaryTheme} onClick={handleOnClick}>
+          {children}
+        </SimpleBtn>
+      )}
+    </>
   );
 };
 

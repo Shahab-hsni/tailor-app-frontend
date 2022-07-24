@@ -1,5 +1,5 @@
-import { font, b, s, v } from "../../styles/variables";
-import { lightTheme } from "../../styles/theme";
+import { font, b, s, v } from "@/styles/variables";
+import { lightTheme } from "@/styles/theme";
 import styled from "styled-components";
 
 export const H1 = styled.h1`

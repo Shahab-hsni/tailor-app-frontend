@@ -7,7 +7,7 @@ import { SMain } from "./styles";
 const Layout = ({ children }) => {
   const location = useLocation();
   const currentPath = location.pathname;
-  console.log(currentPath);
+  // console.log(currentPath);
   const [isHeader, setIsheader] = useState(true);
 
   useEffect(() => {
