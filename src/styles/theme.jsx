@@ -1,0 +1,15 @@
+export const lightTheme = {
+  black: "#0F0E0E",
+  gray4: "#495057",
+  gray3: "#879098",
+  gray2: "#ACB5BD",
+  gray1: "#DDE2E5",
+  white: "#Ffffff",
+  primary: "#7514CC",
+  primaryDark: "#5A3363",
+  red: "#FB3F4A",
+  green: "#17A300",
+  orange: "#FFA247",
+  blue: "#4785FF",
+  lightBlue: "#A0AEC0",
+};
