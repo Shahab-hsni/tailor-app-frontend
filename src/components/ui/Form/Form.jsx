@@ -26,7 +26,7 @@ const Form = ({ title, formArr, submitBtn, onSubmit, redirect = false }) => {
 
   const onSumbitHandler = () => onSubmit(form, () => setForm(initialForm));
 
-  const hasRedirect = typeof redirect === 'boolean' ? redirect : !!redirect;
+  const hasRedirect = typeof redirect === "boolean" ? redirect : !!redirect;
 
   return (
     <>
@@ -65,9 +65,9 @@ const Form = ({ title, formArr, submitBtn, onSubmit, redirect = false }) => {
           </SRedirect>
         )}
       </SForm>
-      <PrimaryButton handleOnClick={() => console.log('first')} type="Button">
+      {/* <PrimaryButton handleOnClick={() => console.log('first')} type="Button">
         <p>hello world</p>
-      </PrimaryButton>
+      </PrimaryButton> */}
     </>
   );
 };

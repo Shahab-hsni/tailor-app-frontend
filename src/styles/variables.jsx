@@ -4,6 +4,7 @@ export const v = {
   headerHeight: "60px",
   smSpacing: `8px`,
   mdSpacing: `16px`,
+  rgSpacing: `24px`,
   lgSpacing: `32px`,
   xlSpacing: `48px`,
   xxlSpacing: `60px`,

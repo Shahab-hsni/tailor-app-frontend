@@ -7,6 +7,7 @@ export const lightTheme = {
   white: "#Ffffff",
   primary: "#7514CC",
   primaryDark: "#5A3363",
+  primaryTransparent: "#7514cc1a",
   red: "#FB3F4A",
   green: "#17A300",
   orange: "#FFA247",

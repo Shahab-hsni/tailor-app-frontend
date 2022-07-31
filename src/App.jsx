@@ -6,13 +6,14 @@ import { ThemeProvider } from "styled-components";
 import { PrimaryButton, SecondaryButton } from "./components/ui/Buttons";
 import SignIn from "./pages/Signin";
 import SignUp from "./pages/Register";
+import Home from "./pages/Home";
 import { lightTheme } from "./styles/theme";
 
 function App() {
   let element = useRoutes([
     { path: "login", element: <SignIn /> },
     { path: "register", element: <SignUp /> },
-    { path: "/", element: <SignIn /> },
+    { path: "/", element: <Home /> },
   ]);
   const themeStyle = lightTheme;
   return (

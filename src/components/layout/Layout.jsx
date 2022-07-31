@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-// import Header from "components/Header/Header";
-// import Footer from "components/Footer/Footer";
-import { SMain } from "./styles";
+import { FaBeer, FaUserTie } from "react-icons/fa";
+import { RiDashboardFill } from "react-icons/Ri";
+
+import { SMain, RMain } from "./styles";
+import Sidebar from "../Sidebar/Sidebar";
 
 const Layout = ({ children }) => {
   const location = useLocation();
@@ -19,15 +21,45 @@ const Layout = ({ children }) => {
     }
   }, []);
 
+  const pages = [
+    {
+      name: "Dashboard",
+      source: "/",
+      icon: <RiDashboardFill />,
+    },
+    {
+      name: "Customers",
+      source: "/customers",
+      icon: <FaUserTie />,
+    },
+    {
+      name: "Orders",
+      source: "/orders",
+      icon: <FaBeer />,
+    },
+  ];
+
   return (
-    <SMain>
-      {isHeader && <header>header</header>}
+    <>
+      {isHeader ? (
+        <RMain>
+          <Sidebar pages={pages} />
+          {children}
+        </RMain>
+      ) : (
+        <SMain>{children}</SMain>
+      )}
+    </>
 
-      {/* PAGE CONTENT */}
-      {children}
+    // <SMain>
+    //   {isHeader && <header>header</header>}
+    //   {isHeader && <Sidebar pages={pages} />}
 
-      {isHeader && <header>Footer</header>}
-    </SMain>
+    //   {/* PAGE CONTENT */}
+    //   {children}
+
+    //   {isHeader && <header>Footer</header>}
+    // </SMain>
   );
 };
 
